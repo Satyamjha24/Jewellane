@@ -3,8 +3,8 @@ const cors = require("cors")
 const { connection } = require('./db')
 const { auth } = require('./middleware/auth.middleware');
 const { userRouter } = require('./routes/user.route');
-
-// const { noteRouter } = require('./routes/Note.route');
+const { adminRouter } = require('./routes/admin.route');
+const { adminauth } = require('./middleware/adminauth.middleware');
 require("dotenv").config()
 
 const app = express()
@@ -18,10 +18,10 @@ app.get("/", (req, res) => {
 })
 
 app.use("/users", userRouter)
+app.use("/admin", adminRouter)
 
 app.use(auth)
-
-// app.use("/notes", noteRouter)
+app.use(adminauth)
 
 app.listen(process.env.port, async () => {
     try {

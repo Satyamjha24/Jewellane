@@ -2,8 +2,8 @@ const express = require('express');
 const { AdminModel } = require("../model/admin.model")
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const { adminauth } = require('../middleware/adminauth.middleware');
 const adminRouter = express.Router()
-
 
 
 adminRouter.post("/register", async (req, res) => {
@@ -24,7 +24,7 @@ adminRouter.post("/register", async (req, res) => {
 
 })
 
-
+adminRouter.use(adminauth)
 
 adminRouter.post("/login", async (req, res) => {
     //Logic
@@ -49,6 +49,8 @@ adminRouter.post("/login", async (req, res) => {
         res.status(400).send({ "err": err.message })
     }
 })
+
+
 
 
 

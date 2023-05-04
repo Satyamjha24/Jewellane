@@ -1,2 +1,4 @@
 .env
+db.json
+db2.json
 node_modules/

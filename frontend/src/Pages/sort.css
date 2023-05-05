@@ -1,0 +1,211 @@
+/* .bannerImage {
+    height: 400px;
+    width: 100%;
+  } */
+  
+  .Ring-subNavbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #fff6c8 0%, #ffd7f5 48%, #beb3ff 100%);
+    box-shadow: 0 0 1px 1px rgb(176, 176, 176);
+  }
+  
+  .accending-decending {
+    margin-right: 80px;
+  }
+  
+  .fetcher-secion {
+    display: flex;
+  }
+  
+  .fetcher-secion > div {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 1px 1px rgb(194, 194, 194);
+  }
+  
+  .fetcher-secion > div:first-child {
+    background-color: rgb(46, 46, 223);
+    color: white;
+  }
+  
+  .accending-decending > select {
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .title {
+    padding: 10px 40px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .product-container {
+    /* border: 1px solid red; */
+    padding: 0 40px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .w-25 {
+    width: 100%;
+    /* position: fixed;
+      left: 0;
+      top:0 */
+  }
+  
+  .filtering-section {
+    /* width: 25%; */
+    margin-top: 10px;
+    padding: -10px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 5px 2px #ececec;
+  }
+  
+  .filter {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .filtering-section > h2 {
+    /* width: 20%; */
+    padding: 12px;
+    text-align: center;
+    background-color: rgb(245, 241, 241);
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  
+  .filter-by-price,
+  .filter-by-productType {
+    margin-top: -15px;
+    padding: 0 10px;
+  }
+  
+  .underLine {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    border-bottom: 1px solid gray;
+  }
+  
+  .price-title,
+  .productType-title {
+    padding: 15px 0px 4px 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333;
+  }
+  
+  .radioBtn-section {
+    height: 200px;
+    overflow-y: auto;
+  }
+  
+  .radioBtn-section > div > input {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  .radioBtn-section > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .radioBtn-section > div > label {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .show-products {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .singleProd {
+    margin-top: 10px;
+    box-shadow: 0 0 0px 2px rgb(243, 242, 242);
+    padding: 0 20px;
+    border-radius: 10px;
+  }
+  
+  .singleProd > img {
+    width: 100%;
+  }
+  
+  .rupee {
+    display: flex;
+    align-items: center;
+    color: purple;
+  }
+  
+  .deliveryDate {
+    /* margin-top: -15px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    gap: 5px;
+  }
+  
+  .deliveryDate > span {
+    font-size: 15px;
+    /* margin-top: 5px; */
+  }
+  
+  .Singletitle {
+    /* margin-top: -13px; */
+    color: rgb(137, 137, 137);
+    margin-bottom: 0.8rem;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* font-size: 16px; */
+    margin-bottom: 1rem;
+  }
+  
+  .btn > button {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .btn > button:first-child {
+    border: 1px solid purple;
+    color: purple;
+  }
+  
+  .btn > button:last-child {
+    border: 1px solid green;
+    color: green;
+  }
+  

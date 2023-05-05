@@ -16,7 +16,8 @@ ringRouter.get("/", async (req, res) => {
 
 ringRouter.post("/add", async (req, res) => {
     try {
-        const ring = await new RingModel()
+        const ring = new RingModel(req.body)
+        await ring.save()
         res.status(200).send({ "msg": "new data added successfully!", "data": ring })
     } catch (err) {
         res.status(400).send({ "err": err.message })
@@ -39,7 +40,7 @@ ringRouter.patch("/update/:ringID", async (req, res) => {
 ringRouter.delete("/delete/:ringID", async (req, res) => {
     const { ringID } = req.params;
     try {
-        await RingModel.findByIdAndUpdate({ _id: ringID })
+        await RingModel.findByIdAndDelete({ _id: ringID })
         res.status(200).send(`The product with id:${ringID} has been deleted`)
 
     } catch (err) {

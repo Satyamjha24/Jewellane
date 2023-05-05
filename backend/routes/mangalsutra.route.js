@@ -4,23 +4,49 @@ const mangalsutraRouter = express.Router()
 
 
 mangalsutraRouter.get("/", async (req, res) => {
+    const { query } = req.query
     try {
-        const mangalsutra = await MangalsutraModel.find()
+        const mangalsutra = await MangalsutraModel.find(query)
         res.status(200).send(mangalsutra)
     } catch (err) {
         res.status(400).send({ "err": err.message })
     }
 })
 
-// mangalsutraRouter.post("/add", async (req, res) => {
-//     try {
-//         const mangalsutra = await new MangalsutraModel()
-//         res.status(200).send({ "msg": "new data added successfully!" })
-//     } catch (err) {
-//         res.status(400).send({ "err": err.message })
-//     }
-// })
+mangalsutraRouter.post("/add", async (req, res) => {
+    try {
+        const mangalsutra = await new MangalsutraModel()
+        res.status(200).send({ "msg": "new data added successfully!", "data": mangalsutra })
+    } catch (err) {
+        res.status(400).send({ "err": err.message })
+    }
+})
 
+
+mangalsutraRouter.patch("/update/:mangalsutraID", async (req, res) => {
+    const { mangalsutraID } = req.params;
+    try {
+        await MangalsutraModel.findByIdAndUpdate({ _id: mangalsutraID }, req.body)
+        res.status(200).send(`The product with id:${mangalsutraID} has been updated`)
+
+    } catch (err) {
+        res.status(400).send(err)
+    }
+
+})
+
+
+mangalsutraRouter.patch("/delete/:mangalsutraID", async (req, res) => {
+    const { mangalsutraID } = req.params;
+    try {
+        await MangalsutraModel.findByIdAndUpdate({ _id: mangalsutraID })
+        res.status(200).send(`The product with id:${mangalsutraID} has been deleted`)
+
+    } catch (err) {
+        res.status(400).send(err)
+    }
+
+})
 
 
 

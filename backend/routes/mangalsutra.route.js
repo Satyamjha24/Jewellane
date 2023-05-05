@@ -4,7 +4,7 @@ const mangalsutraRouter = express.Router()
 
 
 mangalsutraRouter.get("/", async (req, res) => {
-    const { query } = req.query
+    const query = req.query
     try {
         const mangalsutra = await MangalsutraModel.find(query)
         res.status(200).send(mangalsutra)

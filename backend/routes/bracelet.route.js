@@ -36,7 +36,7 @@ braceletRouter.patch("/update/:braceletID", async (req, res) => {
 })
 
 
-braceletRouter.patch("/delete/:braceletID", async (req, res) => {
+braceletRouter.delete("/delete/:braceletID", async (req, res) => {
     const { braceletID } = req.params;
     try {
         await BraceletModel.findByIdAndUpdate({ _id: braceletID })

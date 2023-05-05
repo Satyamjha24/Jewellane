@@ -16,7 +16,8 @@ braceletRouter.get("/", async (req, res) => {
 
 braceletRouter.post("/add", async (req, res) => {
     try {
-        const bracelet = await new BraceletModel()
+        const bracelet = new BraceletModel(req.body)
+        await bracelet.save()
         res.status(200).send({ "msg": "new data added successfully!", "data": bracelet })
     } catch (err) {
         res.status(400).send({ "err": err.message })
@@ -39,7 +40,7 @@ braceletRouter.patch("/update/:braceletID", async (req, res) => {
 braceletRouter.delete("/delete/:braceletID", async (req, res) => {
     const { braceletID } = req.params;
     try {
-        await BraceletModel.findByIdAndUpdate({ _id: braceletID })
+        await BraceletModel.findByIdAndDelete({ _id: braceletID })
         res.status(200).send(`The product with id:${braceletID} has been deleted`)
 
     } catch (err) {

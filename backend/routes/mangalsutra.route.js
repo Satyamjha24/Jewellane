@@ -36,7 +36,7 @@ mangalsutraRouter.patch("/update/:mangalsutraID", async (req, res) => {
 })
 
 
-mangalsutraRouter.patch("/delete/:mangalsutraID", async (req, res) => {
+mangalsutraRouter.delete("/delete/:mangalsutraID", async (req, res) => {
     const { mangalsutraID } = req.params;
     try {
         await MangalsutraModel.findByIdAndUpdate({ _id: mangalsutraID })

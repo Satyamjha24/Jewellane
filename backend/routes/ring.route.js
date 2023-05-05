@@ -36,7 +36,7 @@ ringRouter.patch("/update/:ringID", async (req, res) => {
 })
 
 
-ringRouter.patch("/delete/:ringID", async (req, res) => {
+ringRouter.delete("/delete/:ringID", async (req, res) => {
     const { ringID } = req.params;
     try {
         await RingModel.findByIdAndUpdate({ _id: ringID })

@@ -4,7 +4,7 @@ const braceletRouter = express.Router()
 
 
 braceletRouter.get("/", async (req, res) => {
-    const { query } = req.query
+    const  query  = req.query
     try {
         const cart = await BraceletModel.find(query)
         res.status(200).send(cart)

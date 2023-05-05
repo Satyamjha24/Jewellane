@@ -4,7 +4,7 @@ const ringRouter = express.Router()
 
 
 ringRouter.get("/", async (req, res) => {
-    const { query } = req.query
+    const query = req.query
     try {
         const ring = await RingModel.find(query)
         res.status(200).send(ring)

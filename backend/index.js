@@ -4,7 +4,10 @@ const { connection } = require('./db')
 const { auth } = require('./middleware/auth.middleware');
 const { userRouter } = require('./routes/user.route');
 const { adminRouter } = require('./routes/admin.route');
-const { adminauth } = require('./middleware/adminauth.middleware');
+const { cartRouter } = require('./routes/cart.route');
+const { ringRouter } = require('./routes/ring.route');
+const { braceletRouter } = require('./routes/bracelet.route');
+const { mangalsutraRouter } = require('./routes/mangalsutra.route');
 require("dotenv").config()
 
 const app = express()
@@ -19,9 +22,13 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRouter)
 app.use("/admin", adminRouter)
+app.use("/ring", ringRouter)
+app.use("/bracelet", braceletRouter)
+app.use("/mangalsutra", mangalsutraRouter)
 
 app.use(auth)
-app.use(adminauth)
+app.use("/cart", cartRouter)
+
 
 app.listen(process.env.port, async () => {
     try {

@@ -1,0 +1,99 @@
+#main-div {
+  margin-top: 30px;
+  /* border: 1px solid black; */
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  gap: 25px;
+}
+#left-div {
+  /* border: 1px solid red; */
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.first-div {
+  display: flex;
+  /* border: 1px solid green; */
+  justify-content: space-between;
+  gap: 15px;
+}
+.container1 {
+  width: 50%;
+  /* border: 1px solid blue; */
+  border-radius: 10px;
+}
+.container2 {
+  width: 50%;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-left-style: solid;
+  border-left-color: rgb(136, 99, 251);
+  border-left-width: 10px;
+}
+.items {
+  width: 7%;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#second-div {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.product {
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+.product-image {
+  /* border: 1px solid rgb(30, 26, 26); */
+  margin: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.price-container {
+  /* border: 1px solid rgb(20, 194, 113); */
+
+  margin: 8px;
+}
+.remove-button {
+  border: 1px solid rgb(195, 195, 242);
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  margin-top: 130px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
+#right-div {
+  width: 40%;
+  box-shadow: rgba(136, 99, 251, 0.3) 0px 0px 0px 3px;
+}
+.order-price {
+  
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  padding: 10px;
+  margin-left: 33px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px;
+}
+.place-order {
+  width: 70%;
+  padding: 10px;
+  padding-right: 50px;
+  margin-right: 90px;
+  margin-top: 80px;
+  background: linear-gradient(to right, rgb(222, 87, 229), rgb(136, 99, 251));
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}

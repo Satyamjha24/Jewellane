@@ -78,32 +78,32 @@ export const UserData2 = [
   export const categoriesData = [
     {
       id: 1,
-      type: "Fishing",
+      type: "Rings",
       quantity: 82,
     },
     {
       id: 2,
-      type: "Boating",
+      type: "Bracelets",
       quantity: 60,
     },
     {
       id: 3,
-      type: "Hunting",
+      type: "Earrings",
       quantity: 53,
     },
     {
       id: 4,
-      type: "Shooting",
+      type: "Bangles",
       quantity: 53,
     },
     {
       id: 5,
-      type: "Camping",
+      type: "Solitaires",
       quantity: 136,
     },
     {
       id: 6,
-      type: "Outdoor",
+      type: "Necklace",
       quantity: 62,
     }
   ];

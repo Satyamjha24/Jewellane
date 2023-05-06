@@ -5,7 +5,7 @@ import { addAdmin } from "../../redux/Admin/action";
 
 const AddAdmins = () => {
   const dispatch = useDispatch();
-  const initForm = { name: '', email: '', password: '', position: '',img: '',gender:''}
+  const initForm = { name: '', email: '', password: '', position: '',img: ''}
   const toast = useToast();
   const [form, setForm] = useState(initForm);
 
@@ -49,8 +49,6 @@ const AddAdmins = () => {
           <Input type='url' name='img' id='image' background='#fff' onChange={formChangeHandler} value={form.img} />
           <FormLabel>Admin Email</FormLabel>
           <Input type='email' name='email' id='email' background='#fff' onChange={formChangeHandler} value={form.email} />
-          <FormLabel>Admin Gender</FormLabel>
-          <Input type='text' name='gender' id='contact' background='#fff' onChange={formChangeHandler} value={form.gender} />
           <FormLabel>Admin Password</FormLabel>         
           <Input type='password' name='password' id='passoword' background='#fff' onChange={formChangeHandler} value={form.password} />
           <FormLabel>Admin Category</FormLabel>

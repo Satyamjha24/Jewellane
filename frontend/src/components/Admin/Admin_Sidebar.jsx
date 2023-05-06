@@ -10,6 +10,7 @@ import AddProducts from './AddProducts';
 import AddAdmins from './AddAdmins';
 import {Link as Redirect} from "react-router-dom"
 import logo from './logo.jpg'
+import Chart from './Analyse';
 
 const LinkItems = [
     { name: 'Dashboard', compName: 'Dashboard',heading:'Dashboard', icon: FiHome },
@@ -18,14 +19,15 @@ const LinkItems = [
     { name: 'Manage Orders', compName: 'ManageOrders',heading:'Manage Products', icon: FiShoppingCart },
     { name: 'Add Admins', compName: 'AddAdmins',heading:'Add Admins ', icon: FiPlus },
     { name: 'Manage Admins', compName: 'ManageAdmins',heading:'Manage Admins', icon: FiUsers },
-    {name: "Manage Users",compName:"ManageUsers",heading:"Manage Users", icon:FiUsers}
+    {name: "Manage Users",compName:"ManageUsers",heading:"Manage Users", icon:FiUsers},
+    //{name: "Analyse",compName:"Analyse",heading:"Analyse", icon:FiActivity}
 ];
 
 function SidebarWithHeader({ children }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [comp, setComp] = useState('Dashboard');
     const componentChange = (compName = comp) => {
-        if (compName === 'Dashboard')return <ManageUsers />
+        if (compName === 'Dashboard')return <Chart />
         else if (compName === 'ManageAdmins')return <ManageAdmins />
         else if (compName === 'ManageOrders')return  <ManageOrders />
         else if (compName === 'ManageProducts')return  <ManageProducts />

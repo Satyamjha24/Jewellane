@@ -1,0 +1,45 @@
+
+
+.carousel__main{
+    margin: 4rem 0;
+}
+
+.home__crousel2{
+    /* border:1px solid black; */
+    padding:1.5rem 7%;
+    margin:5rem 0;
+}
+.car_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+.car_box>h1{
+    
+    color: rgb(124, 125, 128);
+    text-align: center;
+    line-height: 44px;
+    font-weight: lighter;
+}
+.car_box>p{
+    
+    color: rgb(60, 60, 61);
+    text-align: center;
+    line-height: 20px;
+    font-weight: light;
+}
+.car_box>button{
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    background-color: white;
+}
+.home__car__icone{
+    font-size: 2.5rem;
+    color:blueviolet;
+    text-align: center;
+}

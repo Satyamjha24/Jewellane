@@ -16,6 +16,8 @@ const adminauth = (req, res, next) => {
             res.send({ "err": error.message })
         }
 
+    }else{
+        res.send({ "msg": "Please Login!!" })
     }
 }
 

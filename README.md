@@ -9,7 +9,7 @@
 
 - Satyam Kumar(Team Leader) (My Linkedin profile :- https://www.linkedin.com/in/satyam-kumar-5843b2227/)
 
-- Ajay (My Linkedin profile :- )
+- Ajay (<a href="https://github.com/Ajay84sia">GitHub</a> & <a href="https://www.linkedin.com/in/ajay-84sia">Linkedin</a>)
 
 - Abhinav Joshi (My Linkedin profile :- )
 

@@ -102,7 +102,7 @@ export const getProducts = (dispatch) => {
     dispatch(getAdminListRequest());
     try {
       const { data } = await axios.get(
-        "https://maroon-sea-urchin-tam.cyclic.app/admins"
+        "https://taupe-waistcoat.cyclic.app/admin"
       );
       dispatch(getAdminListSuccess(data));
     } catch (error) {
@@ -112,7 +112,7 @@ export const getProducts = (dispatch) => {
   export const addAdmin = (admin) => async (dispatch) => {
     dispatch(addAdminRequest());
     try {
-      let { data } = await axios.post("https://maroon-sea-urchin-tam.cyclic.app/admins/add", admin);
+      let { data } = await axios.post("https://taupe-waistcoat.cyclic.app/admin/register", admin);
       dispatch(addAdminSuccess(data));
       return data;
     } catch (error) {
@@ -124,7 +124,7 @@ export const getProducts = (dispatch) => {
     dispatch(deleteAdminRequest());
     try {
       let { data } = await axios.delete(
-        `https://maroon-sea-urchin-tam.cyclic.app/admins/delete/${id}`
+        `https://taupe-waistcoat.cyclic.app/admin/delete/${id}`
       );
       dispatch(deleteAdminSuccess(id));
       return data;

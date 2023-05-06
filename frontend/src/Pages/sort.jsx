@@ -10,7 +10,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import { useDisclosure } from '@chakra-ui/react'
 const Sort = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const initialOrder = searchParams.get("sort");
+    const initialSort = searchParams.get("sort");
 const[sort,setsort]=useState(initialSort || "")
     const[searchParams,setSearchParams]=useSearchParams()
 

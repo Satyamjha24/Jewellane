@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_PRODUCT_FAILURE, ADD_PRODUCT_REQUEST, ADD_PRODUCT_SUCCESS, DELETE_PRODUCT_FAILURE, DELETE_PRODUCT_REQUEST, DELETE_PRODUCT_SUCCESS, DELETE_USER_FAILURE, DELETE_USER_REQUEST, DELETE_USER_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, GET_USERLIST_FAILURE, GET_USERLIST_REQUEST, GET_USERLIST_SUCCESS, UPDATE_PRODUCT_FAILURE, UPDATE_PRODUCT_REQUEST, UPDATE_PRODUCT_SUCCESS } from './actionTypes';
+import { ADD_ADMIN_REQUEST, ADD_ADMIN_SUCCESS, ADD_PRODUCT_FAILURE, ADD_PRODUCT_REQUEST, ADD_PRODUCT_SUCCESS, DELETE_ADMIN_FAILURE, DELETE_ADMIN_REQUEST, DELETE_ADMIN_SUCCESS, DELETE_PRODUCT_FAILURE, DELETE_PRODUCT_REQUEST, DELETE_PRODUCT_SUCCESS, DELETE_USER_FAILURE, DELETE_USER_REQUEST, DELETE_USER_SUCCESS, GET_ADMINLIST_FAILURE, GET_ADMINLIST_REQUEST, GET_ADMINLIST_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, GET_USERLIST_FAILURE, GET_USERLIST_REQUEST, GET_USERLIST_SUCCESS, UPDATE_PRODUCT_FAILURE, UPDATE_PRODUCT_REQUEST, UPDATE_PRODUCT_SUCCESS } from './actionTypes';
 
 const getProductDataRequest = () => ({ type: GET_PRODUCT_REQUEST });
 const getProductDataSuccess = (payload) => ({ type: GET_PRODUCT_SUCCESS, payload });
@@ -19,6 +19,15 @@ const getUserListFailure = () => ({ type: GET_USERLIST_FAILURE });
 const deleteUserRequest = () => ({ type: DELETE_USER_REQUEST });
 const deleteUserSuccess = (payload) => ({ type: DELETE_USER_SUCCESS, payload });
 const deleteUserFailure = () => ({ type: DELETE_USER_FAILURE });
+const getAdminListRequest = () => ({ type: GET_ADMINLIST_REQUEST });
+const getAdminListSuccess = (payload) => ({ type: GET_ADMINLIST_SUCCESS, payload });
+const getAdminListFailure = () => ({ type: GET_ADMINLIST_FAILURE });
+const addAdminRequest = () => ({ type: ADD_ADMIN_REQUEST });
+const addAdminSuccess = (payload) => ({ type: ADD_ADMIN_SUCCESS, payload });
+const addAdminFailure = () => ({ type: ADD_PRODUCT_FAILURE });
+const deleteAdminRequest = () => ({ type: DELETE_ADMIN_REQUEST });
+const deleteAdminSuccess = (payload) => ({ type: DELETE_ADMIN_SUCCESS, payload });
+const deleteAdminFailure = () => ({ type: DELETE_ADMIN_FAILURE });
 
 export const getProducts = (dispatch) => {
     dispatch(getProductDataRequest());
@@ -86,5 +95,40 @@ export const getProducts = (dispatch) => {
       return res;
     } catch (error) {
       dispatch(deleteUserFailure("error", error));
+    }
+  };
+
+  export const getAdminList = async (dispatch) => {
+    dispatch(getAdminListRequest());
+    try {
+      const { data } = await axios.get(
+        "https://maroon-sea-urchin-tam.cyclic.app/admins"
+      );
+      dispatch(getAdminListSuccess(data));
+    } catch (error) {
+      dispatch(getAdminListFailure(error));
+    }
+  };
+  export const addAdmin = (admin) => async (dispatch) => {
+    dispatch(addAdminRequest());
+    try {
+      let { data } = await axios.post("https://maroon-sea-urchin-tam.cyclic.app/admins/add", admin);
+      dispatch(addAdminSuccess(data));
+      return data;
+    } catch (error) {
+      dispatch(addAdminFailure(error));
+    }
+  };
+  
+  export const deleteAdmin = (id) => async (dispatch) => {
+    dispatch(deleteAdminRequest());
+    try {
+      let { data } = await axios.delete(
+        `https://maroon-sea-urchin-tam.cyclic.app/admins/delete/${id}`
+      );
+      dispatch(deleteAdminSuccess(id));
+      return data;
+    } catch (error) {
+      dispatch(deleteAdminFailure(error));
     }
   };

@@ -9,10 +9,11 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 // import { useSearchParams } from 'react-router-dom'
 import { useDisclosure } from '@chakra-ui/react'
 const Sort = () => {
+  const[searchParams,setSearchParams]=useSearchParams()
     const { isOpen, onOpen, onClose } = useDisclosure();
     const initialSort = searchParams.get("sort");
 const[sort,setsort]=useState(initialSort || "")
-    const[searchParams,setSearchParams]=useSearchParams()
+   
 
 
     const handlechange = (event) => {

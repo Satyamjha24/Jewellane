@@ -29,9 +29,9 @@ const deleteAdminRequest = () => ({ type: DELETE_ADMIN_REQUEST });
 const deleteAdminSuccess = (payload) => ({ type: DELETE_ADMIN_SUCCESS, payload });
 const deleteAdminFailure = () => ({ type: DELETE_ADMIN_FAILURE });
 
-export const getProducts = (dispatch) => {
+export const getProducts =(endpoint)=> (dispatch) => {
     dispatch(getProductDataRequest());
-    axios.get(`https://taupe-waistcoat.cyclic.app/ring/`).then((res) => { dispatch(getProductDataSuccess(res.data)) })
+    axios.get(`https://taupe-waistcoat.cyclic.app/${endpoint}`).then((res) => { dispatch(getProductDataSuccess(res.data)) })
       .catch((err) => {
         dispatch(getProductDataFailure());
       });

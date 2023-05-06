@@ -5,6 +5,9 @@ import {Home} from './pages/Home/Home';
 import { useColorMode,Button } from '@chakra-ui/react'
 import Navbar from './Components/navbar/Navbar';
 import Footer from './Components/footer/Footer'
+import AllRoutes from './routes/AllRoutes';
+import Product from './Pages/Product';
+import CartPage from './Pages/CartPage/CartPage';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -12,11 +15,14 @@ function App() {
     <div className="App">
       {/* <CartPage/> */}
       {/* <Button size='sm' onClick={toggleColorMode}>
-        Toggle Mode
+       // Toggle Mode
       </Button> */}
       <Navbar />
       <Home />
       <Footer />
+      <AllRoutes/>
+    <Product/>
+      <CartPage/>
     </div>
   );
 }

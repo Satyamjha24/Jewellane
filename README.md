@@ -1,6 +1,6 @@
 # Welcome to JewelLane
 
-<h3>Jewel Lane is a clone of an e-commerce website Caratlane which sells the best gold & diamond jewelry. They offer a wide range of rings, earrings, bangles, bracelets and necklaces at the best price.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
+<h3>Jewel Lane is a clone of an e-commerce website Caratlane which sells the best gold & diamond jewellery. They offer a wide range of rings, earrings, bangles, bracelets and necklaces at the best price.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
 </h3>
 
 # Deployed URL 👉 [Click here]()

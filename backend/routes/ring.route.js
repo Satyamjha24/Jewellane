@@ -4,9 +4,25 @@ const ringRouter = express.Router()
 
 
 ringRouter.get("/", async (req, res) => {
-    const query = req.query
+    const { sort } = req.query;
+    const query = req.query.q;
+    const queries = req.query;
+
     try {
-        const ring = await RingModel.find(query)
+        let ring;
+        if (query && sort == "asc") {
+            ring = await RingModel.find({ "title": { "$regex": query, "$options": "i" } }).sort({ price: 1 })
+        } else if (query && sort == "desc") {
+            ring = await RingModel.find({ "title": { "$regex": query, "$options": "i" } }).sort({ price: -1 })
+        } else if (sort === "asc") {
+            ring = await RingModel.find().sort({ price: 1 })
+        } else if (sort === "desc") {
+            ring = await RingModel.find().sort({ price: -1 })
+        } else if (query) {
+            ring = await RingModel.find({ "title": { "$regex": query, "$options": "i" } })
+        } else {
+            ring = await RingModel.find(queries)
+        }
         res.status(200).send(ring)
     } catch (err) {
         res.status(400).send({ "err": err.message })

@@ -7,7 +7,7 @@ import Navbar from './Components/navbar/Navbar';
 import Footer from './Components/footer/Footer'
 import AllRoutes from './routes/AllRoutes';
 import Product from './Pages/Product';
-import CartPage from './Pages/CartPage/CartPage';
+//import CartPage from './Pages/CartPage/CartPage';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -21,7 +21,7 @@ function App() {
       <Home />
       <Footer />
       <AllRoutes/>
-    <Product/>
+      <Product/>
       <CartPage/>
     </div>
   );

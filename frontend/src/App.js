@@ -7,6 +7,9 @@ import Navbar from './Components/navbar/Navbar';
 import Footer from './Components/footer/Footer'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import AllRoutes from './routes/AllRoutes';
+import Product from './Pages/Product';
+
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -14,13 +17,19 @@ function App() {
     <div className="App">
       {/* <CartPage/> */}
       {/* <Button size='sm' onClick={toggleColorMode}>
-        Toggle Mode
+       // Toggle Mode
       </Button> */}
       {/* <Navbar /> */}
       {/* <Home /> */}
       {/* <Footer /> */}
       {/* <Login /> */}
-      <SignUp />
+      <SignUp /
+      <Navbar />
+      <Home />
+      <Footer />
+      <AllRoutes/>
+      <Product/>
+      <CartPage/>
     </div>
   );
 }

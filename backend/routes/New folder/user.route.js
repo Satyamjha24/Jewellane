@@ -35,7 +35,7 @@ userRouter.post("/login", async (req, res) => {
                 // result == true
                 if (result) {
                     const token = jwt.sign({ userID: user._id, email: user.email }, "project");
-                    res.status(200).send({ "msg": "Login Succesfull", token, "name": user.name, "email": user.email })
+                    res.status(200).send({ "msg": "Login Succesfull", token })
                 } else {
                     res.status(200).send({ "msg": "Wrong Credentials!!!" })
                 }

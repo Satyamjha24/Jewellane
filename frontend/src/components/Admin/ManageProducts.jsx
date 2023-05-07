@@ -21,6 +21,7 @@ const ManageProducts = () => {
       {isError && <h2>Error Occured while getting product list</h2>}
       <Center>
         <Select
+          bg='yellow.400'
           placeholder="Select Product Category"
           onChange={(e) => setEndpoint(e.target.value)}
         >

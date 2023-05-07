@@ -20,6 +20,9 @@ export const LoginModal = () => {
   function redirectLogin() {
     naviagte("/login");
   }
+  function redirectAdminLogin() {
+    naviagte("/adminlogin");
+  }
 
   function redirectRegister() {
     naviagte("/register");
@@ -39,10 +42,27 @@ export const LoginModal = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={redirectRegister}>
+            <Button
+              variant="link"
+              style={{ color: "#DF6BE9" }}
+              mr={3}
+              onClick={redirectAdminLogin}
+            >
+              Admin
+            </Button>
+            <Button
+              style={{ color: "#DF6BE9", border: "1px solid #DF6BE9" }}
+              variant="outline"
+              mr={3}
+              onClick={redirectRegister}
+            >
               Sign Up
             </Button>
-            <Button variant="ghost" onClick={redirectLogin}>
+            <Button
+              variant="solid"
+              style={{ backgroundColor: "#DF6BE9", color: "white" }}
+              onClick={redirectLogin}
+            >
               Log In
             </Button>
           </ModalFooter>

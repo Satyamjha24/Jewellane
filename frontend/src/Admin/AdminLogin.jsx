@@ -19,9 +19,10 @@ import Navbar from "../Components/navbar/Navbar";
 import Footer from "../Components/footer/Footer";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { userLogin } from "../redux/UserReducer/action";
+import { useContext, useState } from "react";
 import { adminLogin } from "../redux/Admin/action";
+import { Navigate } from "react-router-dom";
+import { AdminAuthContext } from "../ContextApi/AdminAuthContext";
 
 const initialState = {
   email: "",
@@ -33,7 +34,7 @@ export default function AdminLogin() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
-  const { adminToken } = useSelector((state) => state.adminReducer);
+  const { isAuth, adminLoginContext } = useContext(AdminAuthContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,37 +51,32 @@ export default function AdminLogin() {
         isClosable: true,
       });
     } else {
-      dispatch(adminLogin(formData));
-    }
-    if (adminToken !== "") {
-      toast({
-        title: `Admin Login Successfully`,
-        status: "success",
-        duration: 1000,
-        isClosable: true,
+      dispatch(adminLogin(formData)).then((res) => {
+        toast({
+          title: `Admin Login Successfully`,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        adminLoginContext(localStorage.getItem("adminToken"));
+        setFormData(initialState);
       });
-      setFormData(initialState);
     }
   };
+
+  if (isAuth) {
+    return <Navigate to="/admin" />;
+  }
+
   return (
     <>
       <Navbar />
-      <Flex
-        minH={"100vh"}
-        align={"center"}
-        justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
-      >
+      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"gray.50"}>
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
             <Heading fontSize={"3xl"}>Admin Login</Heading>
           </Stack>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={8}
-          >
+          <Box rounded={"lg"} bg={"white"} boxShadow={"lg"} p={8}>
             <Stack spacing={4}>
               <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>

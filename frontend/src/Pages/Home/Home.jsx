@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
+import Caraousel from "../../Components/Caraousel";
 // import { Homecarousel } from "./crousel/crousel"
 
 let data__home__img3 = [
@@ -27,13 +28,8 @@ let data__home__img6 = [
 export const Home = () => {
   return (
     <div>
-      <div class="home__img1">
-        <img
-          src="https://cdn.caratlane.com/media/static/images/V4/2023/CL/04-APR/AppBanner/ATOFFER/02/Desktop_1920x694.jpg"
-          alt="pic1"
-          height="100%"
-          width="100%"
-        />
+      <div class="home__img1" width="100vw">
+        <Caraousel />
       </div>
       <div className="home__img2">
         <div>

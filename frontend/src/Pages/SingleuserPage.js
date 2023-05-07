@@ -78,15 +78,15 @@ console.log(data)
             w={{ base: "100%", md: "80%" }} 
             rounded={"md"} 
             alt={"feature image"} 
-            src={show ? image : (data.imglink?data.imglink:"https://media2.giphy.com/media/2uJ0EhZnMAMDe/giphy.gif")} 
+            src={show ? image : (data?.imglink?data?.imglink:"https://media2.giphy.com/media/2uJ0EhZnMAMDe/giphy.gif")} 
  
             objectFit={"cover"} 
             transition='all 0.5s cubic-bezier(.08,.52,.52,1)' 
           /> 
-          <div style={{display :"grid",height:"100px",width:"50%",border:"40px solid black",gridTemplateColumns:"repeat(3,1fr)"}}>
-          <img style={{height:"200px",width:"200px"}}onClick={handleClick} src={data.img2}/>
-          <img onClick={handleClick} src={data.img2}/>
-          <img onClick={handleClick} src={data.img3}/>
+          <div style={{display :"grid",height:"100px",width:"50%",border:"2px solid black",gridTemplateColumns:"repeat(3,1fr)",gap:"2px"}}>
+          <img style={{height:"200px",width:"200px"}} onClick={handleClick} src={data?.img2}/>
+          <img style={{height:"200px",width:"200px"}} onClick={handleClick} src={data?.img2}/>
+          <img style={{height:"200px",width:"200px"}} onClick={handleClick} src={data?.img3}/>
           </div>
           
         

@@ -10,11 +10,15 @@ import SignUp from './pages/SignUp';
 import AllRoutes from './routes/AllRoutes';
 import Product from './Pages/Product';
 
+import SingleuserPage from './Pages/SingleuserPage';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div className="App">
+
+    <AllRoutes/>
+    <Product/>
       {/* <CartPage/> */}
       {/* <Button size='sm' onClick={toggleColorMode}>
        // Toggle Mode
@@ -30,7 +34,7 @@ function App() {
       <AllRoutes/>
       <Product/>
       <CartPage/>
-    </div>
+</div>
   );
 }
 

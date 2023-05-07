@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { getProduct } from '../redux/Product/action'
 import "./product.css";
 import Sort from './sort';
+import { Spinner } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import { useBreakpointValue, Flex } from "@chakra-ui/react";
@@ -20,7 +21,7 @@ import {
   MenuDivider,
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { AccordionIcon } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
@@ -38,6 +39,7 @@ const Product = () => {
     const dispatch=useDispatch()
     const isLargeScreen = useBreakpointValue({ base: false, lg: true });
     const {products,isLoading}=useSelector((state)=>state.productReducer)
+    console.log(isLoading)
     const location = useLocation();
     const obj = {
       params: {
@@ -56,7 +58,8 @@ const Product = () => {
   
 console.log(products)
 // console.log(res);
-   return (
+ 
+  return (
     <div>
     <Sort/>
     <p style={{textAlign:"left",fontSize:"20px"}}><b>Jwellery </b>7302 design</p>
@@ -82,7 +85,8 @@ console.log(products)
         </Box>
       )}
     </Box>
-    <div
+
+              <div
             style={{
               display: "grid",
               height: "auto",
@@ -95,7 +99,17 @@ console.log(products)
             }}
            
           >
-            {products.map((el) => {
+          {isLoading?<Spinner
+             style={{ textAlign: "center", marginTop: "300px",paddingLeft:"50%",marginLeft:"100%"}}
+        thickness="20px"
+        speed="0.98s"
+        emptyColor="pink.200"
+        color="purple.500"
+        size="xl"
+
+/>:
+          <>
+          {products.map((el) => {
               return (
                 <div>
                     <Box
@@ -129,6 +143,9 @@ console.log(products)
                           },
                         }}
                       >
+                      {
+                        
+                      }
                       <Image
                          transition= {"transform 0.5s ease"}
                          hover={"transform: rotate(180deg)" } 
@@ -191,7 +208,9 @@ console.log(products)
                              ({el.reviews})
                           </Text>
                           <div style={{display:Flex,justifyContent:"space-between"}}>
-                          <Button  fontSize="18px"
+                        
+                        <Link to={`/ring/${el._id}`}>
+                        <Button  fontSize="18px"
                             width="45%"
                             color={"purple"}
                             align={"center"}
@@ -200,6 +219,7 @@ console.log(products)
                   
                            Add To Cart
                           </Button>
+                        </Link> 
                         
                         
                    
@@ -228,7 +248,21 @@ console.log(products)
                 </div>
               );
             })}
+          </> 
+        
+          }
+            
           </div>
+   
+  
+    
+   
+  
+ 
+   
+   
+   
+    
     </div>
    
   
@@ -236,7 +270,9 @@ console.log(products)
 
     </div>
   )
-}
+ }
+
+
 
 export default Product
 

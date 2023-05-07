@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./sort.css"
+import { useSearchParams } from 'react-router-dom'
+import { useEffect } from 'react'
 import Drawerdata from './drawer'
 import { Box, Image } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { useSearchParams } from 'react-router-dom'
+// import { useSearchParams } from 'react-router-dom'
 import { useDisclosure } from '@chakra-ui/react'
 const Sort = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const initialOrder = searchParams.get("sort");
+const[sort,setsort]=useState(initialSort || "")
     const[searchParams,setSearchParams]=useSearchParams()
+
+
+    const handlechange = (event) => {
+      const selectedOrder = event.target.value;
+      setsort(selectedOrder);
+     
+    };
+    useEffect(()=>{
+let params={
+}
+sort&&(params.sort=sort)
+setSearchParams(params)
+    },[sort])
   return (
    <>
     <div className="Ring-container">
@@ -51,9 +68,7 @@ const Sort = () => {
             </div>
             <div className="accending-decending">
               <select
-                name=""
-                id=""
-            
+              onChange={handlechange}
               >
                 <option value="">Sort by Price</option>
                 <option value="desc" >High to Low</option>

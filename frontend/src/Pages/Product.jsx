@@ -8,6 +8,7 @@ import { Button } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import { useBreakpointValue, Flex } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+// import { useLocation } from "react-router-dom";
 import {
   Menu,
   MenuButton,
@@ -19,7 +20,7 @@ import {
   MenuDivider,
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
-
+import { useSearchParams } from 'react-router-dom';
 import { AccordionIcon } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
@@ -33,13 +34,26 @@ import { Box } from "@chakra-ui/react";
 import Drawerdata from './drawer';
 // useEffect
 const Product = () => {
+  const [searchParams]=useSearchParams()
     const dispatch=useDispatch()
     const isLargeScreen = useBreakpointValue({ base: false, lg: true });
     const {products,isLoading}=useSelector((state)=>state.productReducer)
+    const location = useLocation();
+    const obj = {
+      params: {
+        // _sort: searchParams.get("order") === "price" && "price",
+        sort: searchParams.get("sort")
+      },
+    };
+    
+    console.log(searchParams.get("sort"))
 
-useEffect(() => {
-  dispatch(getProduct)
-}, [])
+  useEffect(() => {
+    console.log(obj)
+    dispatch(getProduct(obj))
+  }, [location.search])
+  
+  
 console.log(products)
 // console.log(res);
    return (
@@ -183,6 +197,7 @@ console.log(products)
                             align={"center"}
                             border={"2px solid purple"}
                             borderRadius={"10px"}>
+                  
                            Add To Cart
                           </Button>
                         

@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-// import logo from "./logo.png";
+import logo from "../image/logo.png";
 import { MdLocationPin } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { TbHeartFilled } from "react-icons/tb";
@@ -20,11 +20,10 @@ const Navbar = () => {
     <div id="nav__main">
       <div id="nav__top"></div>
       <div id="nav__medium">
-        <div id="nav__logo">
+        <div id="nav__logo" style={{paddingLeft:"10px"}} >
           <Link to="/">
             {" "}
-            {/* <img src={logo} alt="logo" height="100%" width="100%" /> */}
-            JewelLane
+            <img src={logo} alt="logo" width="75%" />
           </Link>
         </div>
 

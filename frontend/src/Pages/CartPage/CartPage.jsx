@@ -3,10 +3,13 @@ import "./CartPage.css";
 import { Link } from "react-router-dom";
 import Payment from "../Payment/Payment";
 import CartFooter from "./CartFooter";
+import Footer from "../../Components/footer/Footer";
+import Navbar from "../../Components/navbar/Navbar";
 
 const CartPage = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <div id="main-div">
         <div id="left-div">
           <div className="first-div">
@@ -80,7 +83,8 @@ const CartPage = () => {
       <div>
         <CartFooter />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

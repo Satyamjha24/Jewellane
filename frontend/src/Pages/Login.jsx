@@ -19,9 +19,10 @@ import Navbar from "../Components/navbar/Navbar";
 import Footer from "../Components/footer/Footer";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { userLogin } from "../redux/UserReducer/action";
-
+import { AdminAuthContext } from "../ContextApi/AdminAuthContext";
+import { Navigate } from "react-router-dom";
 
 const initialState = {
   mobile: "",
@@ -33,8 +34,9 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
+  const { isUserAuth, userLoginContext } = useContext(AdminAuthContext);
+
   const { token } = useSelector((state) => state.userReducer);
-  const localToken = localStorage.getItem("token");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,39 +54,31 @@ export default function Login() {
         isClosable: true,
       });
     } else {
-      dispatch(userLogin(formData));
-    }
-    if (token !== "") {
-      toast({
-        title: `User Login Successfully`,
-        status: "success",
-        duration: 1000,
-        isClosable: true,
+      dispatch(userLogin(formData)).then((res) => {
+        toast({
+          title: `User Login Successfully`,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        userLoginContext(localStorage.getItem("token"));
+        setFormData(initialState);
       });
-      setFormData(initialState);
-
-
     }
   };
+
+  if (isUserAuth) {
+    return <Navigate to="/product" />;
+  }
   return (
     <>
       <Navbar />
-      <Flex
-        minH={"100vh"}
-        align={"center"}
-        justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
-      >
+      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"gray.50"}>
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
             <Heading fontSize={"3xl"}>Login in to JewelLane</Heading>
           </Stack>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={8}
-          >
+          <Box rounded={"lg"} bg={"white"} boxShadow={"lg"} p={8}>
             <Stack spacing={4}>
               <FormControl id="Mobile Number" isRequired>
                 <FormLabel>Mobile Number</FormLabel>

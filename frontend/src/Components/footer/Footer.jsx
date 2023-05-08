@@ -22,7 +22,7 @@ const Footer = () => {
             <Footermid />
           </div>
           <ul className={styles.footerList}>
-            <li>
+            <li style={{listStyleType:"none"}}>
               <h3>Know Your Jewellery</h3>
               <ul className={styles.footerList1}>
                 <li>DIAMOND GUIDE</li>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <li>DIGITAL GOLD</li>
               </ul>
             </li>
-            <li>
+            <li style={{listStyleType:"none"}}>
               <h3>CaratLane Advantage</h3>
               <ul className={styles.footerList1}>
                 <li>15-DAY RETURNS</li>
@@ -41,14 +41,14 @@ const Footer = () => {
                 <li>OLD GOLD EXCHANGE</li>
               </ul>
             </li>
-            <li>
+            <li style={{listStyleType:"none"}}>
               <h3>Customer Service</h3>
               <ul className={styles.footerList1}>
                 <li>RETURN POLICY</li>
                 <li>ORDER STATUS</li>
               </ul>
             </li>
-            <li>
+            <li style={{listStyleType:"none"}}>
               <h3>About Us</h3>
               <ul className={styles.footerList1}>
                 <li>OUR STORY</li>
@@ -57,11 +57,12 @@ const Footer = () => {
                 <li>CAREERS</li>
               </ul>
             </li>
-            <li>
-              <h3>Contact Us</h3>
+            <li style={{listStyleType:"none"}}>
+              
               <ul className={styles.footerList1}>
-                <li>
+                <li style={{listStyleType:"none"}}>
                   <div className={styles.footerContactCon}>
+                  <h3 style={{fontWeight:"bold"}}>Contact Us</h3>
                     <div>
                       <IoIosCall />
                     </div>
@@ -102,7 +103,6 @@ const Footer = () => {
                     <span className={styles.underline}>Click Here</span>
                   </p>
                 </li>
-                <li></li>
               </ul>
             </li>
           </ul>
@@ -148,16 +148,16 @@ const Footer = () => {
               </div>
               <div className={styles.footerPaymentOptionCon}>
                 <ul className={styles.footerPaymentOption}>
-                  <li>
+                  <li style={{listStyleType:"none"}}>
                     <RiVisaLine />
                   </li>
-                  <li>
+                  <li style={{listStyleType:"none"}}>
                     <FaCcMastercard />
                   </li>
-                  <li>
+                  <li style={{listStyleType:"none"}}>
                     <FaCcPaypal />
                   </li>
-                  <li>
+                  <li style={{listStyleType:"none"}}>
                     <FaAmazonPay />
                   </li>
                 </ul>

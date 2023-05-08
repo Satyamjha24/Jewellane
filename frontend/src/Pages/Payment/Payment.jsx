@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Center,
-  Divider,
   Flex,
   Grid,
   GridItem,
@@ -19,11 +18,13 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
+import Footer from "../../Components/footer/Footer";
+import Navbar from "../../Components/navbar/Navbar";
 
 const Payment = () => {
   // const { cart } = useSelector((store) => store.cartReducer);
@@ -39,18 +40,9 @@ const Payment = () => {
   }
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
       <Box
         py={8}
         px={3}
@@ -232,7 +224,7 @@ const Payment = () => {
         </Flex>
       </Box>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

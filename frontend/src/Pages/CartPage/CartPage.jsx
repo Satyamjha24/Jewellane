@@ -1,5 +1,7 @@
 import React from "react";
 import "./CartPage.css";
+import { Link } from "react-router-dom";
+import Payment from "../Payment/Payment";
 import CartFooter from "./CartFooter";
 
 const CartPage = () => {
@@ -67,7 +69,12 @@ const CartPage = () => {
               <p>Rs. 100</p>
             </div>
           </div>
-          <button className="place-order">Proceed to Payment</button>
+          <button
+            className="place-order"
+            onClick={() => <Link to="/Payment"></Link>}
+          >
+            Proceed to Payment
+          </button>
         </div>
       </div>
       <div>

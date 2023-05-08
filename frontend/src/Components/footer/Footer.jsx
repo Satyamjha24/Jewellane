@@ -78,21 +78,21 @@ const Footer = () => {
                   <p>
                     General :{" "}
                     <span className={styles.underline}>
-                      Contactus@Precious.Com
+                      Contactus@Jewellane.Com
                     </span>
                   </p>
                 </li>
                 <li>
                   <p>
                     Corporate :{" "}
-                    <span className={styles.underline}>B2B@Precious.Com</span>
+                    <span className={styles.underline}>B2B@Jewellane.Com</span>
                   </p>
                 </li>
                 <li>
                   <p>
                     HR :{" "}
                     <span className={styles.underline}>
-                      Careers@Precious.Com
+                      Careers@Jewellane.Com
                     </span>
                   </p>
                 </li>
@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.footerDownload}>
-            <h4>Download Precious app</h4>
+            <h4>Download Jewellane app</h4>
             <div className={styles.footerdownoadListCON}>
               <div>
                 <div className={styles.footerDownloadlistcontainer}>

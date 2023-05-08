@@ -62,7 +62,7 @@ const ManageUsers = () => {
               {users.map((user) => {
         
                 return <Tr key={user.id}>
-                  <Td>{user.fname+' '+user.lname}</Td>
+                  <Td style={{textTransform:'capitalize'}}>{user.fname+' '+user.lname}</Td>
                   <Td >{0}</Td>
                   <Td>{0}</Td>
                   <Td >{'₹' + 0}</Td>

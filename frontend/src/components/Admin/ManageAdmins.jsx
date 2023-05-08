@@ -56,7 +56,7 @@ const ManageAdmins = () => {
             <Tbody>
               {admins.map(admin=><Tr key={admin.id}>
                 <Td><Image src={admin.image} alt={admin.name} boxSize='90px' borderRadius='full' /></Td>
-                <Td>{admin.name}</Td>
+                <Td style={{textTransform:'capitalize'}}>{admin.name}</Td>
                 <Td>{admin.email}</Td>
                 <Td>{admin.type}</Td>
                 <Td><IconButton border='2px solid red' aria-label='Delete database' onClick={()=>handleDelete(admin)} icon={<DeleteIcon/>}/></Td>

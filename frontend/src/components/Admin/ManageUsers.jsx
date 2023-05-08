@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser,getUsersList } from '../../redux/Admin/action';
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableContainer, Heading, IconButton, useToast,CircularProgress } from '@chakra-ui/react'
 import { FiUserX } from 'react-icons/fi';
+import { DeleteIcon } from '@chakra-ui/icons'
+
 
 const ManageUsers = () => {
   const { isLoadingUserList, isErrorUserList, users} = useSelector(store => store.adminReducer);
@@ -15,8 +17,8 @@ const ManageUsers = () => {
       dispatch(deleteUser(user._id));
       toast({
         title: 'User Deleted',
-        description: `${user.name} has been deleted successfully`,
-        status: 'success',
+        description: `${user.fname} has been deleted successfully`,
+        status: 'error',
         duration: 4000,
         isClosable: true,
       })
@@ -60,12 +62,12 @@ const ManageUsers = () => {
               {users.map((user) => {
         
                 return <Tr key={user.id}>
-                  <Td>{user.name}</Td>
+                  <Td>{user.fname+' '+user.lname}</Td>
                   <Td >{0}</Td>
                   <Td>{0}</Td>
                   <Td >{'₹' + 0}</Td>
                   <Td >{'₹' + 100}</Td>
-                  <Td><IconButton aria-label='Delete database' onClick={() => handleDelete(user)} icon={<FiUserX />} /></Td>
+                  <Td><IconButton border='2px solid red' aria-label='Delete database' onClick={() => handleDelete(user)} icon={<DeleteIcon />} /></Td>
                 </Tr>
               })}
             </Tbody>

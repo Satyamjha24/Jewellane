@@ -73,24 +73,7 @@ const Chart = () => {
         <Box  w='100%' h='50%'><LineChart chartData={orderData} /></Box>
         <Box  w='100%' h='50%'><BarChart chartData={userData} /></Box>
       </Box>
-      {/* <Box width= "22%" margin= "auto" mt= "20px">
-        <PieChart chartData={categoryData} />
-      </Box>
-      <Box
-       
-          margin="auto"
-          display= "flex"
-          flexDirection= "column"
-          width= "55%"
       
-      >
-        <Box width= "85%" margin="auto">
-          <LineChart chartData={orderData} />
-        </Box>
-        <Box width= "85%" margin="auto">
-          <BarChart chartData={userData} />
-        </Box>
-      </Box> */}
     </Box>
   );
 };

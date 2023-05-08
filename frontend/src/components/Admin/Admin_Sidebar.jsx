@@ -42,7 +42,7 @@ import ManageProducts from "./ManageProducts";
 import AddProducts from "./AddProducts";
 import AddAdmins from "./AddAdmins";
 import { Navigate, Link as Redirect } from "react-router-dom";
-import logo from "./logo.jpg";
+import logo from "../image/logo.png";
 import Chart from "./Analyse";
 import { AdminAuthContext } from "../../ContextApi/AdminAuthContext";
 
@@ -65,12 +65,12 @@ const LinkItems = [
     heading: "Manage Products",
     icon: FiCompass,
   },
-  {
-    name: "Manage Orders",
-    compName: "ManageOrders",
-    heading: "Manage Products",
-    icon: FiShoppingCart,
-  },
+  // {
+  //   name: "Manage Orders",
+  //   compName: "ManageOrders",
+  //   heading: "Manage Products",
+  //   icon: FiShoppingCart,
+  // },
   {
     name: "Add Admins",
     compName: "AddAdmins",
@@ -89,7 +89,7 @@ const LinkItems = [
     heading: "Manage Users",
     icon: FiUsers,
   },
-  //{name: "Analyse",compName:"Analyse",heading:"Analyse", icon:FiActivity}
+  
 ];
 
 function SidebarWithHeader({ children }) {
@@ -98,29 +98,25 @@ function SidebarWithHeader({ children }) {
   const componentChange = (compName = comp) => {
     if (compName === "Dashboard") return <Chart />;
     else if (compName === "ManageAdmins") return <ManageAdmins />;
-    else if (compName === "ManageOrders") return <ManageOrders />;
+    //else if (compName === "ManageOrders") return <ManageOrders />;
     else if (compName === "ManageProducts") return <ManageProducts />;
     else if (compName === "AddProducts") return <AddProducts />;
     else if (compName === "AddAdmins") return <AddAdmins />;
     else if (compName === "ManageUsers") return <ManageUsers />;
   };
 
-//   const handleLogout = () => {
-//     adminLogout();
-//   };
+
 
   useEffect(() => {
     componentChange(comp);
   }, [comp]);
 
-//   if (!isAuth) {
-//     return <Navigate to="/" />;
-//   }
+
 
   const SidebarContent = ({ onClose, ...rest }) => {
     return (
       <Box
-        mt="10px"
+        mt="0px"
         transition="3s ease"
         bg={"black"}
         borderRight="1px"
@@ -261,7 +257,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
               <HStack>
                 <Avatar
                   size={"sm"}
-                  src={"https://avatars.githubusercontent.com/u/107462251?v=4"}
+                  src={localStorage.getItem('adminImage')}
                 />
                 <VStack
                   display={{ base: "none", md: "flex" }}
@@ -269,7 +265,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   spacing="1px"
                   ml="2"
                 >
-                  <Text fontSize="sm">Satyam</Text>
+                  <Text fontSize="sm" style={{textTransform:'capitalize'}}>{localStorage.getItem('adminName')}</Text>
                   <Text fontSize="xs" color="gray.1000">
                     Admin
                   </Text>

@@ -142,7 +142,7 @@ export const deleteAdmin = (id) => async (dispatch) => {
     let { data } = await axios.delete(
       `https://taupe-waistcoat.cyclic.app/admin/delete/${id}`,{
         headers:{
-          "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
       }
       }
     );
@@ -158,6 +158,8 @@ export const adminLogin = (Obj) => (dispatch) => {
 
   return axios.post(`https://taupe-waistcoat.cyclic.app/admin/login`, Obj).then((res) => {
     localStorage.setItem('adminToken', res.data.token)
+    localStorage.setItem('adminName', res.data.name)
+    localStorage.setItem('adminImage', res.data.image)
     dispatch({ type: ADMIN_LOGIN_REQUEST, payload: res.data.token })
   }).catch(() => {
     dispatch({ type: ADMIN_FAILURE_REQUEST })

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAdmin, getAdminList } from '../../redux/Admin/action';
 import {Table,Thead,Tbody,Tr,Th,Td,TableContainer,Heading,IconButton,useToast,Image,CircularProgress} from '@chakra-ui/react'
+import { DeleteIcon } from '@chakra-ui/icons'
 import {FiUserX} from 'react-icons/fi';
 
 const ManageAdmins = () => {
@@ -15,7 +16,7 @@ const ManageAdmins = () => {
       toast({
         title: 'Admin Deleted',
         description: `${admin.name} has been deleted successfully`,
-        status: 'success',
+        status: 'error',
         duration: 4000,
         isClosable: true,
       })
@@ -58,7 +59,7 @@ const ManageAdmins = () => {
                 <Td>{admin.name}</Td>
                 <Td>{admin.email}</Td>
                 <Td>{admin.type}</Td>
-                <Td><IconButton aria-label='Delete database' onClick={()=>handleDelete(admin)} icon={<FiUserX/>}/></Td>
+                <Td><IconButton border='2px solid red' aria-label='Delete database' onClick={()=>handleDelete(admin)} icon={<DeleteIcon/>}/></Td>
               </Tr>)}
             </Tbody>
           </Table>

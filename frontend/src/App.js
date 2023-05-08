@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import CartPage from '../src/pages/CartPage/CartPage';
-import {Home} from './pages/Home/Home';
-import { useColorMode,Button } from '@chakra-ui/react'
-import Navbar from './Components/navbar/Navbar';
-import Footer from './Components/footer/Footer'
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import AllRoutes from './routes/AllRoutes';
-import Product from './Pages/Product';
+// import logo from './logo.svg';
+import "./App.css";
+import FinalPage from "./Pages/FinalPage";
+// import CartPage from '../src/pages/CartPage/CartPage';
+// import {Home} from './pages/Home/Home';
+// import { useColorMode,Button } from '@chakra-ui/react'
+// import Navbar from './Components/navbar/Navbar';
+// import Footer from './Components/footer/Footer'
+// import Login from './pages/Login';
+// import SignUp from './pages/SignUp';
+// import AllRoutes from './routes/AllRoutes';
+// import Product from './Pages/Product';
 
-import SingleuserPage from './Pages/SingleuserPage';
-
+// import SingleuserPage from './Pages/SingleuserPage';
+import Payment from "./Pages/Payment/Payment";
 function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  // const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div className="App">
-
-    <AllRoutes/>
-    <Product/>
+      {/* <AllRoutes/> */}
+      {/* <Product/> */}
       {/* <CartPage/> */}
       {/* <Button size='sm' onClick={toggleColorMode}>
        // Toggle Mode
@@ -27,14 +27,16 @@ function App() {
       {/* <Home /> */}
       {/* <Footer /> */}
       {/* <Login /> */}
-      <SignUp /
-      <Navbar />
-      <Home />
-      <Footer />
-      <AllRoutes/>
-      <Product/>
-      <CartPage/>
-</div>
+      {/* <SignUp /> */}
+      {/* // <Navbar /> */}
+      {/* <Home /> */}
+      {/* <Footer /> */}
+      {/* <AllRoutes/> */}
+      {/* <Product/> */}
+      {/* <CartPage/> */}
+      {/* <Payment /> */}
+      <FinalPage />
+    </div>
   );
 }
 

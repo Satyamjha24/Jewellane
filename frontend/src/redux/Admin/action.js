@@ -79,7 +79,11 @@ export const getUsersList = async (dispatch) => {
   dispatch(getUserListRequest());
   try {
     const { data } = await axios.get(
-      "https://maroon-sea-urchin-tam.cyclic.app/users"
+      "https://taupe-waistcoat.cyclic.app/admin/users",{
+        headers:{
+          "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+      }
+      }
     );
     dispatch(getUserListSuccess(data));
   } catch (error) {
@@ -90,7 +94,11 @@ export const getUsersList = async (dispatch) => {
 export const deleteUser = (id) => async (dispatch) => {
   dispatch(deleteUserRequest());
   try {
-    let res = await axios.delete(`https://maroon-sea-urchin-tam.cyclic.app/users/delete/${id}`);
+    let res = await axios.delete(`https://taupe-waistcoat.cyclic.app/admin/users/delete/${id}`,{
+      headers:{
+        "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+    }
+    });
     dispatch(deleteUserSuccess(id));
     return res;
   } catch (error) {
@@ -102,8 +110,12 @@ export const getAdminList = async (dispatch) => {
   dispatch(getAdminListRequest());
   try {
     const { data } = await axios.get(
-      "https://taupe-waistcoat.cyclic.app/admin"
-    );
+      "https://taupe-waistcoat.cyclic.app/admin",{
+        headers:{
+          "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+      }
+      });
+      console.log(data);
     dispatch(getAdminListSuccess(data));
   } catch (error) {
     dispatch(getAdminListFailure(error));
@@ -112,7 +124,11 @@ export const getAdminList = async (dispatch) => {
 export const addAdmin = (admin) => async (dispatch) => {
   dispatch(addAdminRequest());
   try {
-    let { data } = await axios.post("https://taupe-waistcoat.cyclic.app/admin/register", admin);
+    let { data } = await axios.post("https://taupe-waistcoat.cyclic.app/admin/register", admin , {
+      headers:{
+        "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+    }
+    });
     dispatch(addAdminSuccess(data));
     return data;
   } catch (error) {
@@ -124,7 +140,11 @@ export const deleteAdmin = (id) => async (dispatch) => {
   dispatch(deleteAdminRequest());
   try {
     let { data } = await axios.delete(
-      `https://taupe-waistcoat.cyclic.app/admin/delete/${id}`
+      `https://taupe-waistcoat.cyclic.app/admin/delete/${id}`,{
+        headers:{
+          "Authorization": `bearer ${localStorage.getItem("adminToken")}`,
+      }
+      }
     );
     dispatch(deleteAdminSuccess(id));
     return data;

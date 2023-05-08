@@ -19,22 +19,22 @@ import Navbar from "../Components/navbar/Navbar";
 import Footer from "../Components/footer/Footer";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { userLogin } from "../redux/UserReducer/action";
-
+import { useContext, useState } from "react";
+import { adminLogin } from "../redux/Admin/action";
+import { Navigate } from "react-router-dom";
+import { AdminAuthContext } from "../ContextApi/AdminAuthContext";
 
 const initialState = {
-  mobile: "",
+  email: "",
   password: "",
 };
 
-export default function Login() {
+export default function AdminLogin() {
   const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
-  const { token } = useSelector((state) => state.userReducer);
-  const localToken = localStorage.getItem("token");
+  const { isAuth, adminLoginContext } = useContext(AdminAuthContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,8 +43,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (formData.mobile === "" || formData.password === "") {
+    if (formData.email === "" || formData.password === "") {
       toast({
         title: `Please enter all the details first`,
         status: "error",
@@ -52,48 +51,40 @@ export default function Login() {
         isClosable: true,
       });
     } else {
-      dispatch(userLogin(formData));
-    }
-    if (token !== "") {
-      toast({
-        title: `User Login Successfully`,
-        status: "success",
-        duration: 1000,
-        isClosable: true,
+      dispatch(adminLogin(formData)).then((res) => {
+        toast({
+          title: `Admin Login Successfully`,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        adminLoginContext(localStorage.getItem("adminToken"));
+        setFormData(initialState);
       });
-      setFormData(initialState);
-
-
     }
   };
+
+  if (isAuth) {
+    return <Navigate to="/admin" />;
+  }
+
   return (
     <>
       <Navbar />
-      <Flex
-        minH={"100vh"}
-        align={"center"}
-        justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
-      >
+      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"gray.50"}>
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
-            <Heading fontSize={"3xl"}>Login in to JewelLane</Heading>
+            <Heading fontSize={"3xl"}>Admin Login</Heading>
           </Stack>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={8}
-          >
+          <Box rounded={"lg"} bg={"white"} boxShadow={"lg"} p={8}>
             <Stack spacing={4}>
-              <FormControl id="Mobile Number" isRequired>
-                <FormLabel>Mobile Number</FormLabel>
+              <FormControl id="email" isRequired>
+                <FormLabel>Email address</FormLabel>
                 <Input
-                  type="Number"
-                  value={formData.mobile}
+                  type="email"
+                  value={formData.email}
                   onChange={handleChange}
-                  name="mobile"
-                  maxlength="10"
+                  name="email"
                 />
               </FormControl>
               <FormControl id="password" isRequired>
@@ -137,14 +128,6 @@ export default function Login() {
                 >
                   LOGIN TO CONTINUE
                 </Button>
-              </Stack>
-              <Stack pt={6}>
-                <Text align={"center"}>
-                  New to CaratLane?{" "}
-                  <Link color={"blue.400"} href={"/register"}>
-                    Create an Account
-                  </Link>
-                </Text>
               </Stack>
             </Stack>
           </Box>

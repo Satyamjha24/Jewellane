@@ -5,7 +5,7 @@ import { addAdmin } from "../../redux/Admin/action";
 
 const AddAdmins = () => {
   const dispatch = useDispatch();
-  const initForm = { name: '', email: '', password: '', position: '',img: ''}
+  const initForm = { name: '', email: '', image: '', password: '', type: ''}
   const toast = useToast();
   const [form, setForm] = useState(initForm);
 
@@ -46,14 +46,14 @@ const AddAdmins = () => {
           <FormLabel>Admin Name</FormLabel>
           <Input type='text' name='name' id='name' background='#fff' htmlSize={45} width='auto' onChange={formChangeHandler} value={form.name} />
           <FormLabel>Admin Image Link</FormLabel>
-          <Input type='url' name='img' id='image' background='#fff' onChange={formChangeHandler} value={form.img} />
+          <Input type='url' name='image' id='image' background='#fff' onChange={formChangeHandler} value={form.image} />
           <FormLabel>Admin Email</FormLabel>
           <Input type='email' name='email' id='email' background='#fff' onChange={formChangeHandler} value={form.email} />
           <FormLabel>Admin Password</FormLabel>         
           <Input type='password' name='password' id='passoword' background='#fff' onChange={formChangeHandler} value={form.password} />
           <FormLabel>Admin Category</FormLabel>
           {/* I can also pass defaultValue to Select */}
-          <Select placeholder="Select Role" name="position" id='role' background="cornflowerblue" onChange={formChangeHandler}>
+          <Select placeholder="Select Role" name="type" id='role' background="cornflowerblue" onChange={formChangeHandler}>
             <option value='Admin'>Admin</option>
             <option value='Developer'>Developer</option>
           </Select>

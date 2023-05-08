@@ -1,5 +1,5 @@
 import React from 'react'
-import SidebarWithHeader from '../components/Admin/Admin_Sidebar'
+import SidebarWithHeader from '../Components/Admin/Admin_Sidebar'
 
 const Admin = () => {
   return (

@@ -48,18 +48,16 @@ const ManageAdmins = () => {
                 <Th>Photo</Th>
                 <Th>Name</Th>
                 <Th>Email</Th>
-                <Th>Gender</Th>
                 <Th>Role</Th>
                 <Th>Delete</Th>
               </Tr>
             </Thead>
             <Tbody>
               {admins.map(admin=><Tr key={admin.id}>
-                <Td><Image src={admin.img} alt={admin.name} boxSize='90px' borderRadius='full' /></Td>
+                <Td><Image src={admin.image} alt={admin.name} boxSize='90px' borderRadius='full' /></Td>
                 <Td>{admin.name}</Td>
                 <Td>{admin.email}</Td>
-                <Td>{admin.gender}</Td>
-                <Td>{admin.position}</Td>
+                <Td>{admin.type}</Td>
                 <Td><IconButton aria-label='Delete database' onClick={()=>handleDelete(admin)} icon={<FiUserX/>}/></Td>
               </Tr>)}
             </Tbody>

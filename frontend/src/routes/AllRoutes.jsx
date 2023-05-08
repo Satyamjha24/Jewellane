@@ -11,6 +11,8 @@ import SignUp from "../Pages/SignUp";
 import AdminLogin from "../Admin/AdminLogin";
 import SingleProduct from "../Pages/SingleProduct";
 import CartPage from "../Pages/CartPage/CartPage";
+import Payment from "../Pages/Payment/Payment";
+import FinalPage from "../Pages/FinalPage";
 
 const AllRoutes = () => {
   return (
@@ -23,6 +25,8 @@ const AllRoutes = () => {
         <Route path={"/bracelet"} element={<Bracelet />} />
         <Route path={"/product"} element={<Rings />} />
         <Route path={"/cart"} element={<CartPage />} />
+        <Route path={"/payment"} element={<Payment />} />
+        <Route path={"/final"} element={<FinalPage/>} />
         <Route path={"/Mangalsutra"} element={<Mangalsutra />} />
         <Route path={"/admin"} element={<Admin />} />
         <Route path={"/adminlogin"} element={<AdminLogin />} />

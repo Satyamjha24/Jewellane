@@ -99,7 +99,7 @@ const Payment = () => {
                   <StripeCheckout
                     token={onToken}
                     name="JEWELLANE"
-                    currency="USD"
+                    currency="INR"
                     amount="100"
                     stripeKey="pk_test_51MqsBeSA2J3QKzPs2NMhYINDPKsCBIyn87ejtUMBb0AUgVIaZIdtD2xjJ4NtpSG9YCsbGw53lRytTyvAdEPaEk5w00q7rFJ6jG"
                   />

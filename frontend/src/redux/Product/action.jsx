@@ -8,11 +8,11 @@ import {
   PRODUCT_SUCCESS,
 } from "./actionType";
 
-export const getProduct = (obj) => (dispatch) => {
+export const getProduct = (obj,endpoint) => (dispatch) => {
   console.log(obj);
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get(`https://taupe-waistcoat.cyclic.app/ring`, obj)
+    .get(`https://taupe-waistcoat.cyclic.app/${endpoint}`, obj)
     .then((res) => {
       // console.log(res)
       dispatch({ type: PRODUCT_SUCCESS, payload: res.data });

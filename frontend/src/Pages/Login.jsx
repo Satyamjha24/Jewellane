@@ -68,7 +68,7 @@ export default function Login() {
   };
 
   if (isUserAuth) {
-    return <Navigate to="/product" />;
+    return <Navigate to="/ring" />;
   }
   return (
     <>

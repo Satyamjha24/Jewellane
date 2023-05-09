@@ -22,7 +22,7 @@ import {
 
 import { useEffect } from "react";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -37,7 +37,7 @@ export default function SingleProduct() {
   const [show, setShow] = useState(false);
 
   const [show2, setShow2] = useState(false);
-  const { ring_id } = useParams();
+  const { endpoint, id } = useParams();
   const { products } = useSelector((store) => store.productReducer);
 
   const [data, setData] = useState({});
@@ -46,14 +46,15 @@ export default function SingleProduct() {
   const [image, setImage] = useState(data?.imglink);
 
   useEffect(() => {
-    // console.log(ring_id);
+    // console.log(id);
 
     let dataa = products.filter((el) => {
-      return el._id === ring_id;
+
+      return el._id == id;
     });
 
     setData(dataa[0]);
-  }, [ring_id]);
+  }, [id]);
 
   // console.log(products);
 
@@ -248,6 +249,11 @@ export default function SingleProduct() {
                 </Button>
               </Tooltip>
             </Flex>
+            {/* <Link to={`/${endpoint}`}>
+              <Button colorScheme="green" ml="6" w="40%">
+                Go BAck
+              </Button>
+            </Link> */}
           </Stack>
         </SimpleGrid>
       </Container>

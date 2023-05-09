@@ -9,7 +9,7 @@ export const Navbardropdown = () => {
       <div className={styles.navdropWrapper}>
         <ul className={styles.navdroplist}>
           <li>
-            <Link to="/products">
+            <Link to="/">
               <div className={styles.navdropheader}>
                 <p>BEST SELLERS</p>
               </div>
@@ -25,7 +25,7 @@ export const Navbardropdown = () => {
           </li>
 
           <li>
-            <Link>
+            <Link to="/ring">
               <div className={styles.navdropheader}>
                 <p>RINGS</p>
               </div>
@@ -37,9 +37,9 @@ export const Navbardropdown = () => {
           </li>
 
           <li>
-            <Link>
+            <Link to="/mangalsutra">
               <div className={styles.navdropheader}>
-                <p>EARRINGS</p>
+                <p>MANGALSUTRA</p>
               </div>
             </Link>
 
@@ -49,7 +49,7 @@ export const Navbardropdown = () => {
           </li>
 
           <li>
-            <Link>
+            <Link to="/bracelet">
               <div className={styles.navdropheader}>
                 <p>BRACELETS & BANGLES</p>
               </div>

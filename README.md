@@ -7,15 +7,15 @@
 
 ## Our Team Members
 
-- Satyam Kumar(Team Leader) (My Linkedin profile :- https://www.linkedin.com/in/satyam-kumar-5843b2227/)
+- Satyam Kumar(Team Leader) (<a href="https://github.com/Satyamjha24">GitHub</a> & <a href="https://www.linkedin.com/in/satyam-kumar-5843b2227/">Linkedin</a>)
 
 - Ajay (<a href="https://github.com/Ajay84sia">GitHub</a> & <a href="https://www.linkedin.com/in/ajay-84sia">Linkedin</a>)
 
-- Abhinav Joshi (My Linkedin profile :- )
+- Abhinav Joshi (<a href="https://github.com/abhinavjoshi1798">GitHub</a>)
 
-- Harshita Katara (My Linkedin profile :- )
+- Harshita Katara (<a href="https://github.com/Harshitakatara34">GitHub</a> )
 
-- Aditi Sharma (My Linkedin profile :- )
+- Aditi Sharma (<a href="https://github.com/AditiSharma00">GitHub</a> )
   <br/>
 
 <br/>

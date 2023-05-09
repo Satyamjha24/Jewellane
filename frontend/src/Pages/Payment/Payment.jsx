@@ -18,7 +18,7 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
@@ -30,6 +30,8 @@ const Payment = () => {
   // const { cart } = useSelector((store) => store.cartReducer);
   //   const [cartTotal, setCartTotal] = useState(0);
   const [complete, setComplete] = useState(false);
+
+  const totalPrice = localStorage.getItem("totalPrice");
 
   const onToken = (token) => {
     setComplete(true);
@@ -52,7 +54,6 @@ const Payment = () => {
         marginBottom={"50px"}
         width="38%"
         borderRadius="20px"
-        
       >
         <Heading textAlign={"center"}>Select Payment Method</Heading>
         <br />
@@ -92,7 +93,7 @@ const Payment = () => {
                     token={onToken}
                     name="JEWELLANE"
                     currency="INR"
-                    amount="100"
+                    amount={totalPrice}
                     stripeKey="pk_test_51MqsBeSA2J3QKzPs2NMhYINDPKsCBIyn87ejtUMBb0AUgVIaZIdtD2xjJ4NtpSG9YCsbGw53lRytTyvAdEPaEk5w00q7rFJ6jG"
                   />
                 </TabPanel>

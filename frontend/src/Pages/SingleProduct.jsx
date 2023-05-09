@@ -15,10 +15,7 @@ import {
   Button,
   ButtonGroup,
   Stat,
-  StatLabel,
   StatNumber,
-  StatHelpText,
-  StatArrow,
   StatGroup,
   Tooltip,
 } from "@chakra-ui/react";
@@ -52,6 +49,7 @@ export default function SingleProduct() {
     // console.log(id);
 
     let dataa = products.filter((el) => {
+
       return el._id == id;
     });
 
@@ -73,7 +71,9 @@ export default function SingleProduct() {
   // console.log(data, "singledata");
 
   const handleCart = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     let obj = {
+      data: data._id,
       title: data.title,
       image: data.imglink,
       price: data.price,
@@ -82,6 +82,9 @@ export default function SingleProduct() {
     };
 
     dispatch(addToCart(obj));
+    cart.push(obj);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     setShow2(true);
   };
 
@@ -126,6 +129,7 @@ export default function SingleProduct() {
                 }}
                 onClick={handleClick}
                 src={data?.imglink}
+                alt="image1"
               />
               <img
                 style={{
@@ -136,6 +140,7 @@ export default function SingleProduct() {
                 }}
                 onClick={handleClick}
                 src={data?.img3}
+                alt="image2"
               />
 
               <img
@@ -147,7 +152,9 @@ export default function SingleProduct() {
                 }}
                 onClick={handleClick}
                 src={data?.img2}
+                alt="image1"
               />
+
               <img
                 style={{
                   height: "100px",
@@ -157,6 +164,7 @@ export default function SingleProduct() {
                 }}
                 onClick={handleClick}
                 src={data?.img1}
+                alt="image1"
               />
             </div>
           </Flex>

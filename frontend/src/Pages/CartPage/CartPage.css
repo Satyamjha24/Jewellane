@@ -10,7 +10,7 @@
 }
 #left-div {
   /* border: 1px solid red; */
-  width: 60%;
+  width: 70%;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
@@ -44,44 +44,65 @@
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  height: 230px;
 }
 .product {
-  /* border: 1px solid black; */
   display: flex;
-  gap: 10px;
-  width: 50%;
+  gap: 5px;
+  width: 70%;
 }
 .product-image {
   /* border: 1px solid rgb(30, 26, 26); */
-  margin: 8px;
+  margin: 14px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  width: 50%;
 }
 .price-container {
   /* border: 1px solid rgb(20, 194, 113); */
-
+  width: 50%;
   margin: 8px;
 }
 .remove-button {
   border: 1px solid #c3c3f2;
-  width: 40%;
+  width: 30%;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
-  margin-top: 130px;
-  margin-left: 100px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-bottom: 5px;
   margin-right: 20px;
   align-items: center;
+}
+.quantity {
+  display: flex;
+  width: 10%;
+  margin-left: 30px;
+  margin-top: 200px;
+  padding-left: 28px;
+  margin-bottom: 5px;
+
+  align-items: center;
+}
+.quantity-button {
+  border: 1px solid #c3c3f2;
+  /* margin-top: 20px;
+  margin-left: 60px;
+  margin-bottom: 80px;
+  margin-right: 20px;  */
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 #right-div {
   width: 40%;
   box-shadow: rgba(136, 99, 251, 0.3) 0px 0px 0px 3px;
 }
 .order-price {
-  
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 60%;
   padding: 10px;
   margin-left: 33px;
   margin-top: 40px;

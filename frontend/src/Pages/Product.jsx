@@ -215,8 +215,8 @@ const Product = ({ endpoint }) => {
                                 width="45%"
                                 color={"purple"}
                                 align={"center"}
-                                border={"2px solid purple"}
-                                borderRadius={"10px"}
+                                border={"1px solid purple"}
+                                borderRadius={"9px"}
                               >
                                 View Details
                               </Button>
@@ -226,7 +226,7 @@ const Product = ({ endpoint }) => {
                                 width="45%"
                                 color={"green"}
                                 align={"center"}
-                                border={"2px solid green"}
+                                border={"1px solid green"}
                                 borderRadius={"10px"}
                                 marginLeft={"5%"}
                               >

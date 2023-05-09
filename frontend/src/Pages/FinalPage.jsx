@@ -5,6 +5,7 @@ import Footer from "../Components/footer/Footer";
 import Navbar from "../Components/navbar/Navbar";
 
 const FinalPage = () => {
+  
   return (
     <>
       <Navbar />

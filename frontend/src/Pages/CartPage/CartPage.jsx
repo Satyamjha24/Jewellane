@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CartPage.css";
 import { Link } from "react-router-dom";
-import Payment from "../Payment/Payment";
+// import Payment from "../Payment/Payment";
 import CartFooter from "./CartFooter";
 import Footer from "../../Components/footer/Footer";
 import Navbar from "../../Components/navbar/Navbar";
 
+// import { addToCart, getProduct } from "../redux/Product/action";
 const CartPage = () => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  // const [showAlert, setShowAlert] = useState(false);
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    setCartItems(items);
+    // console.log(items);
+  }, []);
+
+  useEffect(() => {
+    let total = 0;
+    cartItems.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+    setTotalPrice(total);
+    localStorage.setItem("totalPrice", total);
+  }, [cartItems]);
+  const handleQuantityChange = (index, newQuantity) => {
+    const newItems = [...cartItems];
+    newItems[index].quantity = newQuantity;
+    setCartItems(newItems);
+    localStorage.setItem("cart", JSON.stringify(newItems));
+  };
+  const handleRemoveItem = (index) => {
+    const newItems = [...cartItems];
+    newItems.splice(index, 1);
+    setCartItems(newItems);
+    localStorage.setItem("cart", JSON.stringify(newItems));
+  };
+
   return (
     <>
       <Navbar />
@@ -27,62 +59,100 @@ const CartPage = () => {
             </div>
           </div>
           <h1 className="items">Items</h1>
-          <div id="second-div">
-            <div className="product">
-              <div className="product-image">
-                <img
-                  src="https://cdn.caratlane.com/media/catalog/product/cache/6/small_image/200x200/9df78eab33525d08d6e5fb8d27136e95/U/E/UE06258-1R00RS_1_lar.jpg"
-                  alt="product-ima"
-                />
+          <div>
+            {cartItems.map((item, index) => (
+              <div id="second-div" key={item.data}>
+                <div className="product">
+                  <div className="product-image">
+                    <img src={item.image} alt="product-ima" />
+                  </div>
+                  <div className="price-container">
+                    <p style={{ fontSize: "15px" }}>{item.title}</p>
+                    <p style={{ fontSize: "16px" }}>JT12345-1RD234</p>
+                    <br />
+                    <p style={{ fontSize: "16px" }}>
+                      We will bring similar designs!
+                    </p>
+
+                    <br />
+                    <br />
+                    <p>₹{item.price}</p>
+                  </div>
+                </div>
+                <div className="quantity">
+                  <button
+                    className="quantity-button"
+                    onClick={() =>
+                      handleQuantityChange(index, item.quantity - 1)
+                    }
+                    disabled={item.quantity <= 1}
+                  >
+                    -
+                  </button>
+                  <p>{item.quantity}</p>
+                  <button
+                    className="quantity-button"
+                    onClick={() =>
+                      handleQuantityChange(index, item.quantity + 1)
+                    }
+                  >
+                    +
+                  </button>
+                </div>
+                <div className="remove-button">
+                  <button onClick={() => handleRemoveItem(index)}>
+                    {" "}
+                    Remove
+                  </button>
+                </div>
               </div>
-              <div className="price-container">
-                <p>Ebban Diamond Bracelet</p>
-                <p>JT12345-1RD234</p>
-                <br />
-                <br />
-                <p>Rs.100.00</p>
-              </div>
-            </div>
-            <div className="remove-button">
-              <button>Remove</button>
-            </div>
+            ))}
           </div>
         </div>
-        <div id="right-div">
-          <p
-            style={{
-              fontWeight: "600",
-              width: "50%",
-              fontSize: "25px",
-              marginTop: "20px",
-              color: "rgb(136, 99, 251)",
-            }}
-          >
-            Order Summary :
-          </p>
-          <div className="order-price">
-            <div>
-              <p>Service Charge</p>
-              <br />
-              <p style={{ fontSize: "25px", fontWeight: "600" }}>Total Cost</p>
+        {cartItems.length > 0 ? (
+          <div id="right-div">
+            <p
+              style={{
+                fontWeight: "600",
+                width: "50%",
+                fontSize: "25px",
+                marginTop: "20px",
+                color: "rgb(136, 99, 251)",
+              }}
+            >
+              Order Summary :
+            </p>
+            <div className="order-price">
+              <div>
+                <p>Service Charge</p>
+                <br />
+                <p style={{ fontSize: "25px", fontWeight: "600" }}>
+                  Total Cost:
+                </p>
+              </div>
+              <div>
+                <p>Free </p>
+                <br />
+                <p>₹{+totalPrice}</p>
+              </div>
             </div>
-            <div>
-              <p>Free </p>
-              <br />
-              <p>Rs. 100</p>
-            </div>
+            <Link to="/payment">
+              <button className="place-order">Proceed to Payment</button>
+            </Link>
           </div>
-          <button
-            className="place-order"
-            onClick={() => <Link to="/Payment"></Link>}
-          >
-            Proceed to Payment
-          </button>
-        </div>
+        ) : (
+          <div>
+            Your cart is empty.
+            <br />
+            <br />
+            <h1 style={{ color: "blue" }}>
+              <Link to="/product">Start shopping now!</Link>
+            </h1>
+          </div>
+        )}
       </div>
-      <div>
-        <CartFooter />
-      </div>
+
+      <CartFooter />
       <Footer />
     </>
   );

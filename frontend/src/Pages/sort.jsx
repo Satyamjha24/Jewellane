@@ -33,7 +33,7 @@ setSearchParams(params)
     
 
 <Box height="30%" width="100%">
-<Box
+{/* <Box
   backgroundImage="url('https://assets.cltstatic.com/images/responsive/DefaultBanner_Desktop.webp')"
   backgroundPosition="center"
   backgroundRepeat="no-repeat"
@@ -48,7 +48,7 @@ setSearchParams(params)
   }}
 >
       
-</Box>
+</Box> */}
 
 </Box>
 

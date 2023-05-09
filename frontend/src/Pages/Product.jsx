@@ -34,7 +34,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Drawerdata from "./drawer";
 // useEffect
-const Product = () => {
+const Product = ({ endpoint }) => {
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
@@ -52,7 +52,7 @@ const Product = () => {
 
   useEffect(() => {
     console.log(obj);
-    dispatch(getProduct(obj));
+    dispatch(getProduct(obj, endpoint));
   }, [location.search]);
 
   console.log(products);
@@ -113,10 +113,10 @@ const Product = () => {
             />
           ) : (
             <>
-              {products.map((el) => {
+              {products?.map((el,i) => {
                 return (
-                  <div>
-                    <Link to={`/ring/${el._id}`}>
+                  <div key={i}>
+                    <Link to={`/${endpoint}/${el._id}`}>
                       <Box
                         w={"40%"}
                         style={{ width: "95%" }}

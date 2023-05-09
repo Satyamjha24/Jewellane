@@ -21,13 +21,13 @@ const AllRoutes = () => {
         <Route path={"/"} element={<HomePage />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<SignUp />} />
-        <Route path="/ring/:ring_id" element={<SingleProduct />}></Route>
+        <Route path="/:endpoint/:id" element={<SingleProduct />}></Route>
         <Route path={"/bracelet"} element={<Bracelet />} />
-        <Route path={"/product"} element={<Rings />} />
+        <Route path={"/ring"} element={<Rings />} />
         <Route path={"/cart"} element={<CartPage />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path={"/final"} element={<FinalPage/>} />
-        <Route path={"/Mangalsutra"} element={<Mangalsutra />} />
+        <Route path={"/mangalsutra"} element={<Mangalsutra />} />
         <Route path={"/admin"} element={<Admin />} />
         <Route path={"/adminlogin"} element={<AdminLogin />} />
         <Route path={"*"} element={<NotFound />} />

@@ -21,13 +21,13 @@
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | <img width="75px" src="https://img.icons8.com/color/256/nodejs.png">  | <img width="75px" src="https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/c7b07b05-0b7d-4d12-8147-8dfd08d21a76"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> | <img width="70px" src="https://img.icons8.com/color/256/mongoose.png"> | <img width="70px" src="https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png"> |
 
-# 🏷️ Home page
+# 🏷️ Home Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/3541575a-c85f-4ee8-abf6-563e109f25c3)
 
-# 🏷️ Signup
+# 🏷️ Signup Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/92fe6f00-d2e5-4147-95b1-90aef5a13858)
 
-# 🏷️ Login
+# 🏷️ Login Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/09d3fd2b-9798-4014-874b-57179af8f47c)
 
 # 🏷️ Products Page
@@ -39,7 +39,7 @@
 # 🏷️ Cart Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/cb0cebba-d94a-44e2-915f-d9e8eb4b4b60)
 
-# 🏷️ Admin Login
+# 🏷️ Admin Login Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/8dd8865f-858c-4a77-9282-4d8442eb6396)
 
 # 🏷️ Admin Dashboard

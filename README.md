@@ -42,6 +42,8 @@
 # 🏷️ Admin Login
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/8dd8865f-858c-4a77-9282-4d8442eb6396)
 
+# 🏷️ Admin Dashboard
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/ae1c8d6a-551a-4018-9478-6c652452928a)
 
 
 ---

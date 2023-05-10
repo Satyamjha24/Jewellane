@@ -30,7 +30,7 @@
 - Type : Group Project
 - Duration of Project - 5 Days
 - Number of Contributors - 5
-  - <a style="color:#ffd41f" href="https://github.com/Satyamjha24">Satyam Kumar</a> => Team Lead
+  - <a style="color:#ffd41f" href="https://github.com/Satyamjha24">Satyam Kumar</a> -> Team Lead
   - <a style="color:#ffd41f" href="https://github.com/Ajay84sia">Ajay</a>
   - <a style="color:#ffd41f" href="https://github.com/abhinavjoshi1798">Abhinav Joshi</a>
   - <a style="color:#ffd41f" href="https://github.com/AditiSharma00">Aditi Sharma</a>

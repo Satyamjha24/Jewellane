@@ -20,8 +20,21 @@
 | Node                                                                                                                                                                                                                                                                                                                                                        | Express                                                                                                                           | MongoDB                                                                                                                            | Mongoose                                                                                                                    | JWT                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | <img width="75px" src="https://img.icons8.com/color/256/nodejs.png">  | <img width="75px" src="https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/c7b07b05-0b7d-4d12-8147-8dfd08d21a76"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> | <img width="70px" src="https://img.icons8.com/color/256/mongoose.png"> | <img width="70px" src="https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png"> |
+
 # 🏷️ Home page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/48e9a567-29ac-4cfb-9e03-e02717d9f581)
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/3541575a-c85f-4ee8-abf6-563e109f25c3)
+
+# 🏷️ Products Page
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/89c4a46a-7e70-441f-88b4-a124dea330b9)
+
+# 🏷️ Details Page
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/372870c4-2098-4932-8b58-009d9e89df2c)
+
+# 🏷️ Cart Page
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/cb0cebba-d94a-44e2-915f-d9e8eb4b4b60)
+
+
+
 
 ---
 

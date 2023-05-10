@@ -24,6 +24,12 @@
 # 🏷️ Home page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/3541575a-c85f-4ee8-abf6-563e109f25c3)
 
+# 🏷️ Signup
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/92fe6f00-d2e5-4147-95b1-90aef5a13858)
+
+# 🏷️ Login
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/09d3fd2b-9798-4014-874b-57179af8f47c)
+
 # 🏷️ Products Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/89c4a46a-7e70-441f-88b4-a124dea330b9)
 
@@ -33,6 +39,8 @@
 # 🏷️ Cart Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/cb0cebba-d94a-44e2-915f-d9e8eb4b4b60)
 
+# 🏷️ Admin Login
+![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/8dd8865f-858c-4a77-9282-4d8442eb6396)
 
 
 

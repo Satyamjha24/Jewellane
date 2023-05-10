@@ -13,7 +13,7 @@
 
 - Abhinav Joshi (<a href="https://github.com/abhinavjoshi1798">GitHub</a>)
 
-- Harshita Katara (<a href="https://github.com/Harshitakatara34">GitHub</a> )
+- Harshita Katara (<a href="https://github.com/Harshitakatara34">GitHub</a> & <a href="https://www.linkedin.com/in/harshita-katara-09904b246">Linkedin</a> )
 
 - Aditi Sharma (<a href="https://github.com/AditiSharma00">GitHub</a> )
   <br/>

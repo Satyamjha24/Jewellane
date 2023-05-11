@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./sort.css"
 import { useSearchParams } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -8,7 +8,9 @@ import { Flex } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 // import { useSearchParams } from 'react-router-dom'
 import { useDisclosure } from '@chakra-ui/react'
+import { SearchContext } from '../ContextApi/SearchContext'
 const Sort = () => {
+  const{search,setSearch}=useContext(SearchContext)
   const[searchParams,setSearchParams]=useSearchParams()
     const { isOpen, onOpen, onClose } = useDisclosure();
     const initialSort = searchParams.get("sort");
@@ -27,6 +29,18 @@ let params={
 sort&&(params.sort=sort)
 setSearchParams(params)
     },[sort])
+
+    useEffect(() => {
+      const timeoutId = setTimeout(() => {
+        console.log("hv");
+        setSearchParams({ q: search });
+      }, 500);
+      return () => clearTimeout(timeoutId);
+    }, [search]);
+  
+
+
+
   return (
    <>
     <div className="Ring-container">

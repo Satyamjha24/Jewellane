@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getProduct } from "../redux/Product/action";
@@ -33,9 +33,12 @@ import { Center } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Drawerdata from "./drawer";
+import { SearchContext } from "../ContextApi/SearchContext";
+
 // useEffect
 const Product = ({ endpoint }) => {
   const [searchParams] = useSearchParams();
+const{search,setSearch}=useContext(SearchContext)
   const dispatch = useDispatch();
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
   const { products, isLoading } = useSelector((state) => state.productReducer);
@@ -44,12 +47,15 @@ const Product = ({ endpoint }) => {
   const obj = {
     params: {
       // _sort: searchParams.get("order") === "price" && "price",
+      q: searchParams.get("q"),
       sort: searchParams.get("sort"),
+   
     },
   };
 
   console.log(searchParams.get("sort"));
-
+  console.log(searchParams.get("q"));
+  
   useEffect(() => {
     console.log(obj);
     dispatch(getProduct(obj, endpoint));

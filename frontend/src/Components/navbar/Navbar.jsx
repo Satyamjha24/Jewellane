@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./navbar.css";
 import logo from "../image/logo.png";
 import { MdLocationPin } from "react-icons/md";
@@ -14,8 +14,11 @@ import { AiOutlineGold } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { LoginModal } from "./LoginModal";
 import { Navbardropdown } from "../navbardropdown/Navbardropdown";
+import { SearchContext } from "../../ContextApi/SearchContext";
 
 const Navbar = () => {
+  const {search,setSearch}=useContext(SearchContext)
+  console.log(search)
   return (
     <div id="nav__main">
       <div id="nav__top"></div>
@@ -47,7 +50,7 @@ const Navbar = () => {
         </div>
 
         <div id="nav__search">
-          <input type="search" placeholder="Search" />
+          <input type="search" placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)}/>
           <button>
             <IoSearch className="nav__icone__search" />
           </button>

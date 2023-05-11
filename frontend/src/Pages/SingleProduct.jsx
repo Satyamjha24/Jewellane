@@ -54,7 +54,7 @@ export default function SingleProduct() {
     });
 
     setData(dataa[0]);
-  }, [id]);
+  }, []);
 
   // console.log(products);
 

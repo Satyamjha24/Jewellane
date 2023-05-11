@@ -8,17 +8,21 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import AdminAuthContextProvider from './ContextApi/AdminAuthContext';
+import { SearchContextProvider } from './ContextApi/SearchContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <ChakraProvider>
       <ColorModeScript initialColorMode="light" />
+      <SearchContextProvider>
+   
       <AdminAuthContextProvider>
         <Provider store={store}>
           <App />
         </Provider>
       </AdminAuthContextProvider>
+      </SearchContextProvider>
     </ChakraProvider>
   </BrowserRouter>
 

@@ -5,7 +5,7 @@
 
 <br/>
 
-## **Frontend Deployed URL** 👉 (https://jewellane.vercel.app/)
+## **Frontend Deployed URL** 👉 (https://jewellery-blond.vercel.app/)
 
 ## 🏷️ Tech Stack Used :-
 

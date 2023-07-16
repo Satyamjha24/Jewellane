@@ -22,7 +22,8 @@
 | <img width="75px" src="https://img.icons8.com/color/256/nodejs.png">  | <img width="75px" src="https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/c7b07b05-0b7d-4d12-8147-8dfd08d21a76"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> | <img width="70px" src="https://img.icons8.com/color/256/mongoose.png"> | <img width="70px" src="https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png"> |
 
 # 🏷️ Home Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/3541575a-c85f-4ee8-abf6-563e109f25c3)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/a4389f34-13fa-4ddb-9e35-5ea24bbb9043)
+
 
 # 🏷️ Signup Page
 ![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/92fe6f00-d2e5-4147-95b1-90aef5a13858)

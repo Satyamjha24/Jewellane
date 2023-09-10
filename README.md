@@ -1,13 +1,13 @@
-## 🏷️ What is JewelLane ?
+## 🏷️ What is JewelLane?
 
 > Jewel Lane is a clone of an e-commerce website Caratlane which sells the best gold & diamond jewellery. They offer a wide range of rings, earrings, bangles, bracelets and necklaces at the best price.
 ---
 
 <br/>
 
-## **Frontend Deployed URL** 👉 (https://jewellery-blond.vercel.app/)
+## **Frontend Deployed URL** 👉 (https://jewellane.vercel.app/)
 
-## 🏷️ Tech Stack Used :-
+## 🏷️ Tech Stack Used:-
 
 ### Frontend
 
@@ -19,33 +19,47 @@
 
 | Node                                                                                                                                                                                                                                                                                                                                                        | Express                                                                                                                           | MongoDB                                                                                                                            | Mongoose                                                                                                                    | JWT                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| <img width="75px" src="https://img.icons8.com/color/256/nodejs.png">  | <img width="75px" src="https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/c7b07b05-0b7d-4d12-8147-8dfd08d21a76"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> | <img width="70px" src="https://img.icons8.com/color/256/mongoose.png"> | <img width="70px" src="https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png"> |
+| <img width="75px" src="https://img.icons8.com/color/256/nodejs.png">  | <img width="75px" src="https://img.icons8.com/ios/256/express-js.png"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> | <img width="70px" src="https://img.icons8.com/color/256/mongoose.png"> | <img width="70px" src="https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png"> |
 
 # 🏷️ Home Page
 ![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/4cad9755-4102-4b93-b8a2-7087eaebf875)
 
-
-
 # 🏷️ Signup Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/92fe6f00-d2e5-4147-95b1-90aef5a13858)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/6e31e1ee-9ff6-4d74-aa5a-50ec66eefc4b)
 
 # 🏷️ Login Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/09d3fd2b-9798-4014-874b-57179af8f47c)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/667d1bf0-9b78-44c2-b2fe-7e857b49cc5d)
 
 # 🏷️ Products Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/89c4a46a-7e70-441f-88b4-a124dea330b9)
+
+## 🏷️ Rings
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/4fc345e5-1868-46e5-8e30-57528bff47f4)
+
+## 🏷️ Mangalsutra
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/f4a37ffb-635c-4f5d-8a89-901b86d129d4)
+
+## 🏷️ Bracelates
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/d0d5ed3f-263a-4885-94e4-85788df3ee99)
+
 
 # 🏷️ Details Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/372870c4-2098-4932-8b58-009d9e89df2c)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/8a571120-2bf9-4be7-995a-8d732f1a9b59)
 
 # 🏷️ Cart Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/cb0cebba-d94a-44e2-915f-d9e8eb4b4b60)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/948274a5-320d-415f-8fe0-336957c30eb0)
+
+# 🏷️ Payment Page
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/d7636861-bd4b-4203-999a-577ce7a01808)
+
+# 🏷️ Order Success Page
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/f6a56db6-b819-4a31-978d-c56e783a87d1)
 
 # 🏷️ Admin Login Page
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/8dd8865f-858c-4a77-9282-4d8442eb6396)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/2c622e47-9f91-4a95-9016-a6dc27da54c4)
 
 # 🏷️ Admin Dashboard
-![image](https://github.com/Satyamjha24/pointless-belief-3937/assets/98752820/ae1c8d6a-551a-4018-9478-6c652452928a)
+![image](https://github.com/Satyamjha24/Jewellane/assets/98752820/6e31bc3f-45d6-47a0-aba1-871e92330649)
+
 
 
 ---
